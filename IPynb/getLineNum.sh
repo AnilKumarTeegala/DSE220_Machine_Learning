@@ -6,7 +6,7 @@ for element in "data/st0009ts.txt" "data/st1019ts.txt" "data/st2029ts.txt" "data
 	line1=$(cat $element | grep -ni 'WY \| WY &[0-9]' | grep -Eoi '^[^:]+')
 	echo "$WY   $line1" >> "new_$element";
 	
-	line2=$(cat $element | grep -ni 'U.S. \| US & [0-9]' | grep -Eoi '^[^:]+')
+	line2=$(cat $element | grep -ni 'U.S. \| US &[0-9]' | grep -Eoi '^[^:]+')
 	echo "$US   $line2" >> "new_$element";
 
 	line3=$(cat $element | grep -n 'AL \| AL &[0-9]' | grep -Eoi '^[^:]+')
